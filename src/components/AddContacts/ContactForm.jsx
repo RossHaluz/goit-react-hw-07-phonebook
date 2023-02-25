@@ -50,11 +50,11 @@ const ContactForm = () => {
       <FormContact>
         <FormLable>Name</FormLable>
         <FormInput type="text" name="name" />
-        <Error name="name" />
+        <Error component="p" name="name" />
 
         <FormLable>Number</FormLable>
         <FormInput type="tel" name="phone" />
-        <Error name="phone" />
+        <Error component="p" name="phone" />
 
         <FormButton type="submit">Add contact</FormButton>
       </FormContact>

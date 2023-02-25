@@ -1,5 +1,6 @@
 import React from 'react';
 import { Formik } from 'formik';
+import toast from 'react-hot-toast';
 import * as yup from 'yup';
 import {
   FormContact,
@@ -30,11 +31,11 @@ const ContactForm = () => {
     );
 
     if (findName) {
-      alert(`${values.name} is already in contacts!`);
+      toast.error(`${values.name} is already in contacts!`);
       resetForm();
       return;
     } else {
-      alert(`${values.name} successfully added!`);
+      toast.success(`${values.name} successfully added!`);
     }
     dispatch(contactsOperation.addContact(values));
     resetForm();
